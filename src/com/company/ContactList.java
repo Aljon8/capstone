@@ -49,7 +49,7 @@ public class ContactList {
         boolean replace = false;
         for (Contact contact : contactList) {
             if (contact.getName().toLowerCase().contains(inputString)) {
-                System.out.println("[Notification] Contact found");
+                System.out.println("\n[Notification] Contact found");
                 System.out.println("Name: " + contact.getName());
                 System.out.println("Address: " + contact.getAddress());
                 System.out.println("Email: " + contact.getEmail());
@@ -64,7 +64,7 @@ public class ContactList {
         boolean search = false;
         for (Contact contact : contactList) {
             if (contact.getName().toLowerCase().contains(inputString)) {
-                System.out.println("[Notification] Contact found");
+                System.out.println("\n[Notification] Contact found");
                 System.out.println("Name: " + contact.getName());
                 System.out.println("Address: " + contact.getAddress());
                 System.out.println("Email: " + contact.getEmail());
