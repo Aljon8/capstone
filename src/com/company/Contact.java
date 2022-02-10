@@ -46,4 +46,6 @@ public class Contact {
     public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
 }
+    //i used arraylist.set(index, object)
