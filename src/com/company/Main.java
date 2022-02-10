@@ -30,14 +30,14 @@ public class Main {
                 System.out.println("Enter contact email: ");
                 contact.setEmail(appScanner.nextLine());
                 System.out.println("Enter contact phone number: ");
-                contact.setPhoneNumber(Long.parseLong(appScanner.nextLine()));
+                contact.setPhoneNumber(appScanner.nextLine());
                 myContactList.addContact(contact);
                 System.out.println("[Notification] New contact has been added");
                 myContactList.displayNewContact(contact);
             }if (n == 3) {
                 System.out.println("[Update Contact]");
                 System.out.println("Enter existing contact name: ");
-                String inputString = (appScanner.nextLine());
+                String inputString = (appScanner.nextLine().toLowerCase());
                 Contact updatedContact = new Contact();
                 myContactList.updateContact(inputString, updatedContact);
                 System.out.println("Enter contact name: ");
@@ -47,7 +47,7 @@ public class Main {
                 System.out.println("Enter contact email: ");
                 updatedContact.setEmail(appScanner.nextLine());
                 System.out.println("Enter contact phone number: ");
-                updatedContact.setPhoneNumber(Long.parseLong(appScanner.nextLine()));
+                updatedContact.setPhoneNumber(appScanner.nextLine());
                 System.out.println("[Notification] New contact has been added");
                 myContactList.displayNewContact(updatedContact);
 
@@ -55,7 +55,7 @@ public class Main {
 
                 System.out.println("[Remove Contact]");
                 System.out.println("Enter existing contact name: ");
-                String inputString = (appScanner.nextLine());
+                String inputString = (appScanner.nextLine().toLowerCase());
                 System.out.println("Are you sure you want to remove '" + inputString.substring(0, 1).toUpperCase()+inputString.substring(1) + "' from your contacts? Y/N");
                 char decision = appScanner.nextLine().toLowerCase().charAt(0);
                 if (decision == 'y') {
@@ -69,13 +69,13 @@ public class Main {
                     System.out.println("Ok.");
                 }
                 }
-//            if (n == 5) {
-//                System.out.println("[Search Contact]");
-//                System.out.println("Enter existing contact name:");
-//                String inputString = (appScanner.nextLine());
-//                myContactList.searchContact(inputString);
-//
-//            }
+            if (n == 5) {
+                System.out.println("[Search Contact]");
+                System.out.println("Enter existing contact name: ");
+                String inputString = (appScanner.nextLine().toLowerCase());
+                myContactList.searchContact(inputString);
+
+            }
             if (n == 6) {
                 System.exit(0);
 
